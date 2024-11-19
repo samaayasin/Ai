@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.GameController">
+   <children>
+      <AnchorPane fx:id="screen1" prefHeight="768.0" prefWidth="1366.0">
+         <children>
+            <ImageView fitHeight="768.0" fitWidth="1366.0" style="-fx-background-color: transpernt;">
+               <image>
+                  <Image url="@images/gameScreen1.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="Exitbutton" layoutX="1201.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#OnExitbuttonClicked" onMouseEntered="#OnExitbuttonEnter" onMouseExited="#OnExitbuttonExit" prefHeight="130.0" prefWidth="144.0" style="-fx-background-color: transpernt;" stylesheets="@design.css" />
+            <Button fx:id="Nextbutton" layoutX="471.0" layoutY="506.0" mnemonicParsing="false" onMouseClicked="#OnNextbuttonClicked" onMouseEntered="#OnNextbuttonEntered" onMouseExited="#OnNextbuttonExit" prefHeight="69.0" prefWidth="430.0" style="-fx-background-color: transparent;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="screen2" prefHeight="768.0" prefWidth="1366.0" visible="false">
+         <children>
+            <ImageView fitHeight="768.0" fitWidth="1366.0">
+               <image>
+                  <Image url="@images/gameScreen2.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="Exitbutton1" layoutX="1207.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#OnExitbutton1Clicked" onMouseEntered="#OnExitbutton1Enter" onMouseExited="#OnExitbutton1Exit" prefHeight="122.0" prefWidth="127.0" style="-fx-background-color: transparent;" stylesheets="@design.css" />
+            <RadioButton fx:id="easybutton" layoutX="338.0" layoutY="494.0" mnemonicParsing="false" onMouseClicked="#OnEasybuttonClicked" prefHeight="31.0" prefWidth="16.0" />
+            <RadioButton fx:id="medbutton" layoutX="562.0" layoutY="491.0" mnemonicParsing="false" onMouseClicked="#OnMedbuttonClicked" prefHeight="31.0" prefWidth="9.0" />
+            <RadioButton fx:id="hardbutton" layoutX="785.0" layoutY="490.0" mnemonicParsing="false" onMouseClicked="#OnHardbuttonClicked" prefHeight="31.0" prefWidth="14.0" />
+            <Button fx:id="nextScreen2" layoutX="927.0" layoutY="567.0" mnemonicParsing="false" onMouseClicked="#OnNextScreen2Clicked" onMouseEntered="#OnNextScreen2Enter" onMouseExited="#OnNextScreen2Exit" prefHeight="59.0" prefWidth="179.0" style="-fx-background-color: transpernt;" />
+            <TextField fx:id="Name" layoutX="880.0" layoutY="311.0" prefHeight="50.0" prefWidth="121.0" style="-fx-background-color: transpernt; -fx-alignment: center; -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-inner-color: #833E29;" />
+            <TextField fx:id="numberOfStick" layoutX="881.0" layoutY="207.0" prefHeight="50.0" prefWidth="121.0" style="-fx-background-color: transpernt; -fx-font-weight: bold; -fx-alignment: center; -fx-font-size: 30px; -fx-text-inner-color: #833E29;" />
+            <TextField fx:id="numberOfHeap" layoutX="881.0" layoutY="111.0" prefHeight="50.0" prefWidth="121.0" style="-fx-background-color: transpernt; -fx-alignment: center; -fx-font-weight: bold; -fx-font-size: 30px; -fx-text-inner-color: #833E29;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="screen3" prefHeight="768.0" prefWidth="1366.0" visible="false">
+         <children>
+            <ImageView fitHeight="768.0" fitWidth="1366.0">
+               <image>
+                  <Image url="@images/gameScreen3.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="remove1" layoutX="612.0" layoutY="439.0" mnemonicParsing="false" onMouseClicked="#OnRemove1Clicked" onMouseEntered="#OnRemove1Enter" onMouseExited="#OnRemove1Exit" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: transpernt;" />
+            <Button fx:id="remove2" layoutX="1139.0" layoutY="445.0" mnemonicParsing="false" onMouseClicked="#OnRemove2Clicked" onMouseEntered="#OnRemove2Enter" onMouseExited="#OnRemove2Exit" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: transpernt;" />
+            <Button fx:id="Exitbutton2" layoutX="1203.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#OnExitbutton2Clicked" onMouseEntered="#OnExitbutton2Enter" onMouseExited="#OnExitbutton2Exit" prefHeight="115.0" prefWidth="134.0" style="-fx-background-color: transpernt;" stylesheets="@design.css" />
+            <TextArea fx:id="easyRule" layoutX="525.0" layoutY="103.0" prefHeight="107.0" prefWidth="399.0" style="-fx-text-inner-color: #833E29;" text="Easy:&#10;&#10;1.You can remove 5 stick Maximum&#10;2.You cant to leave the remove field empty&#10;3.You cant remove all sticks">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="heapState" layoutX="600.0" layoutY="525.0" prefHeight="130.0" prefWidth="329.0" style="-fx-text-inner-color: #833E29; -fx-font-size: 20px;" />
+            <TextField fx:id="removeHeap1" layoutX="525.0" layoutY="383.0" prefHeight="31.0" prefWidth="58.0" style="-fx-background-color: transpernt; -fx-alignment: center; -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-inner-color: #833E29;" />
+            <TextField fx:id="removeStick1" layoutX="525.0" layoutY="445.0" prefHeight="31.0" prefWidth="58.0" style="-fx-background-color: transpernt; -fx-alignment: center; -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-inner-color: #833E29;" />
+            <TextField fx:id="removeHeap2" layoutX="1052.0" layoutY="383.0" prefHeight="31.0" prefWidth="58.0" style="-fx-background-color: transpernt; -fx-alignment: center; -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-inner-color: #833E29;" />
+            <TextField fx:id="removeStick2" layoutX="1052.0" layoutY="449.0" prefHeight="31.0" prefWidth="58.0" style="-fx-background-color: transpernt; -fx-alignment: center; -fx-font-weight: bold; -fx-font-size: 20px; -fx-text-inner-color: #833E29;" />
+            <TextArea fx:id="medRule1" layoutX="528.0" layoutY="103.0" prefHeight="107.0" prefWidth="399.0" style="-fx-text-inner-color: #833E29;" styleClass="text-area" stylesheets="@design.css" text="Medium:&#10;&#10;1.You can remove 3 stick Maximum&#10;2.You cant to leave the remove field empty&#10;3.You cant remove all sticks" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="hardRule" layoutX="529.0" layoutY="103.0" prefHeight="107.0" prefWidth="399.0" style="-fx-text-inner-color: #833E29;" text="Hard:&#10;&#10;1.You can remove 2 stick Maximum&#10;2.You cant to leave the remove field empty&#10;3.You cant remove all sticks&#10;" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </TextArea>
+            <Label fx:id="nameLable" layoutX="336.0" layoutY="330.0" prefHeight="31.0" prefWidth="70.0" style="-fx-alignment: center; -fx-font-size: 24px; -fx-text-fill: #833E29; -fx-font-weight: bold;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="WinScreen" prefHeight="768.0" prefWidth="1366.0" visible="false">
+         <children>
+            <ImageView fitHeight="768.0" fitWidth="1366.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/winScreen.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="ExitbuttonWin" layoutX="1205.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#OnExitbuttonWinClicked" onMouseEntered="#OnExitbuttonWinEnter" onMouseExited="#OnExitbuttonWinExit" prefHeight="115.0" prefWidth="134.0" style="-fx-background-color: transpernt;" stylesheets="@design.css" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="LoseScreen" layoutY="-1.0" prefHeight="768.0" prefWidth="1366.0" visible="false">
+         <children>
+            <ImageView fitHeight="768.0" fitWidth="1366.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/loseScreen.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="ExitbuttoLose" layoutX="1210.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#OnExitbuttonLoseClicked" onMouseEntered="#OnExitbuttonLoseEnter" onMouseExited="#OnExitbuttonLoseExit" prefHeight="115.0" prefWidth="127.0" style="-fx-background-color: transpernt;" stylesheets="@design.css" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

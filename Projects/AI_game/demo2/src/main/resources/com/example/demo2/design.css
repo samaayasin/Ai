@@ -1,0 +1,9 @@
+.button{
+    -fx-background-color:#7D2C34;
+    -fx-background-radius: 70px;
+    -fx-cursor: hand;
+}
+.text-area{
+    -fx-text-inner-color: #833E29;
+
+}

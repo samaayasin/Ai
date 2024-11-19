@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="fr.js"></script>
+
+    <title>message for you</title>
+    <link rel="stylesheet" href="style2.css"/>
+
+    <title>Neural Network Configuration</title>
+</head>
+<body>
+
+<div class="banner">
+
+
+    <div class="content">
+
+        <div>
+            <a href="fruit3.html">
+                <button type="button" onclick="passValues()">>></button>
+            </a>
+        </div>
+    </div>
+
+
+
+    <select id="ac" name="ac" class="content2">
+        <option value="Tanh">Tanh</option>
+        <option value="RElu">RElu</option>
+        <option value="sigmoid">sigmoid</option>
+
+    </select>
+
+   <select id="goal" name="goal" class="content4">
+    <option value="MSE">MSE</option>
+    <option value="CrossEntropy">CrossEntropy</option>
+  </select>
+
+    <input type="text" id="ep" name="ep" placeholder="" class="content3">
+
+    <input type="text" id="learn" name="learn" placeholder="" class="content5">
+
+    <input type="text" id="neurons" name="neurons" placeholder="" class="content1">
+
+    <script>
+        function passValues() {
+            const activationType = document.getElementById('ac').value;
+            const goal = document.getElementById('goal').value;
+            const epochs = document.getElementById('ep').value;
+            const learningRate = document.getElementById('learn').value;
+            const neurons = document.getElementById('neurons').value;
+            localStorage.setItem('activationType', activationType);
+            localStorage.setItem('goal', goal);
+            localStorage.setItem('epochs', epochs);
+            localStorage.setItem('learningRate', learningRate);
+            localStorage.setItem('neurons', neurons);
+            window.location.href = 'fruit3.html';
+        }
+    </script>
+
+
+
+
+</div>
+</body>
+</html>
